@@ -6,7 +6,7 @@
 /*   By: mbenjbar <mbenjbar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 10:58:28 by mbenjbar          #+#    #+#             */
-/*   Updated: 2024/12/07 14:13:48 by mbenjbar         ###   ########.fr       */
+/*   Updated: 2024/12/07 17:07:01 by mbenjbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 void	print_str(char *s, int *count)
 {
+	int	i;
+
+	i = 0;
 	if (!s)
-		s = "(NULL)";
-	while (*s)
+		s = "(null)";
+	while (s[i] != '\0')
 	{
-		write(1, &*s, 1);
-		(count)++;
-		s++;
+		write(1, &s[i], 1);
+		(*count)++;
+		i++;
 	}
 }
